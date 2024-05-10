@@ -11,19 +11,21 @@ class TestCopyAssignment
             dataptr = std::make_unique<int>(val) ;
         }
         TestCopyAssignment& operator=(const TestCopyAssignment& other);
-        TestCopyAssignment(const TestCopyAssignment& other)
-        {
-            if(this != &other)
-            {
-                dataptr = std::make_unique<int>(*other.dataptr);
-            }
-        }
+        TestCopyAssignment(const TestCopyAssignment& other);
         void show()
         {
             std::cout<<" dataptr value"<<*dataptr<<std::endl;
         }
 };
-
+/* Copy Constructor */
+TestCopyAssignment(const TestCopyAssignment& other)
+{
+    if(this != &other)
+    {
+        dataptr = std::make_unique<int>(*other.dataptr);
+    }
+}
+/* Copy Assignment Operator */
 TestCopyAssignment& TestCopyAssignment::operator=(const TestCopyAssignment& other)
 {
     if(this != &other)
