@@ -34,7 +34,7 @@ int main()
     string str4 = "Programmer";
     vector<string> elem = {str1, str2};
     vectorTest vec = vectorTest(elem);
-    cout <<"size of vector = " <<vec.getsize()<<endl;
+    cout << "size of vector = " << vec.getsize() <<endl;
     vec.printStrings();
     vec.addStringIndex(str3, 1);
     vec.addStringEnd(str4);
